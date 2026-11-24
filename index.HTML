@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ELITE REAL ESTATE & BUILDERS | Peshawar Islamabad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --dark-green: #0a2b1d;
+      --gold: #c5a059;
+      --light-gold: #e2c285;
+      --white: #ffffff;
+      --text-gray: #444;
+      --light-bg: #f8f7f4;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f4f4;
+      color: var(--text-gray);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ========== NAVIGATION ========== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 6%;
+      background: var(--dark-green);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .logo-area h1 {
+      color: var(--gold);
+      font-size: 18px;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ========== HERO ========== */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(10, 43, 29, 0.82), rgba(10, 43, 29, 0.82)), 
+                  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: var(--white);
+      padding: 120px 8% 80px;
+    }
+
+    .hero-content h2 {
+      font-size: clamp(2rem, 6vw, 3.8rem);
+      max-width: 850px;
+      line-height: 1.15;
+      margin-bottom: 22px;
+      font-weight: 700;
+    }
+
+    .hero-content h2 span { color: var(--gold); }
+
+    .sub-text {
+      font-size: 1.15rem;
+      margin-bottom: 40px;
+      border-left: 4px solid var(--gold);
+      padding-left: 18px;
+      max-width: 520px;
+      opacity: 0.95;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--dark-green);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--dark-green);
+    }
+
+    /* ========== COMMON SECTIONS ========== */
+    section {
+      padding: 100px 8%;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--dark-green);
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      color: #666;
+      max-width: 600px;
+      margin-bottom: 50px;
+      font-size: 1.05rem;
+    }
+
+    /* ========== ABOUT ========== */
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      background: #fff;
+    }
+
+    .about-image {
+      height: 480px;
+      background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000') center/cover;
+      border-radius: 12px;
+      box-shadow: 25px 25px 0 var(--gold);
+    }
+
+    .about-content p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .about-highlight {
+      background: var(--light-bg);
+      padding: 22px 25px;
+      border-left: 4px solid var(--gold);
+      margin-top: 30px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .about-highlight strong {
+      color: var(--dark-green);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* ========== SERVICES ========== */
+    .services {
+      background: var(--light-bg);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.35s;
+      border: 1px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      border-color: var(--gold);
+    }
+
+    .service-icon {
+      width: 70px;
+      height: 70px;
+      background: rgba(197, 160, 89, 0.12);
+      color: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin: 0 auto 22px;
+    }
+
+    .service-card h3 {
+      color: var(--dark-green);
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* ========== WHY CHOOSE US ========== */
+    .why-us {
+      background: #fff;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .feature-icon {
+      min-width: 50px;
+      height: 50px;
+      background: var(--dark-green);
+      color: var(--gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .feature-item h4 {
+      color: var(--dark-green);
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* ========== LOCATION ========== */
+    .location-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      background: var(--light-bg);
+    }
+
+    .location-details h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      color: var(--dark-green);
+      margin-bottom: 30px;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 25px;
+      align-items: flex-start;
+    }
+
+    .info-row i {
+      color: var(--gold);
+      font-size: 18px;
+      margin-top: 4px;
+    }
+
+    .info-row b {
+      display: block;
+      color: var(--dark-green);
+      margin-bottom: 3px;
+      font-size: 0.95rem;
+    }
+
+    .info-row p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .map-card {
+      height: 420px;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+                  url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80') center/cover;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+    }
+
+    .map-card h3 {
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+    }
+
+    .map-btn {
+      background: var(--gold);
+      color: var(--dark-green);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 24px;
+      transition: 0.4s;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7); }
+      70% { box-shadow: 0 0 0 18px rgba(197, 160, 89, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+    }
+
+    /* ========== WHATSAPP ========== */
+    .whatsapp-section {
+      padding: 50px 5%;
+      display: flex;
+      justify-content: center;
+      background: #fff;
+    }
+
+    .wa-btn {
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+
+    .wa-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--dark-green);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 50px 20px 30px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    footer .company {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    footer .info {
+      margin-bottom: 18px;
+      font-size: 13px;
+      opacity: 0.85;
+    }
+
+    footer .powered {
+      margin-top: 22px;
+      font-size: 11px;
+      opacity: 0.45;
+      letter-spacing: 1px;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px) {
+      .about-section,
+      .location-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-image {
+        height: 350px;
+        box-shadow: 15px 15px 0 var(--gold);
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .logo-area h1 {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 6%;
+      }
+
+      .hero {
+        padding: 110px 6% 70px;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+      }
+
+      .btn-primary, .btn-outline {
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo-area">
+      <h1>ELITE REAL ESTATE</h1>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#location">Location</a>
+      <a href="https://wa.me/923358290584">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h2>ELITE REAL ESTATE & BUILDERS<br><span>PESHAWAR · ISLAMABAD</span></h2>
+      <p class="sub-text">Trusted real estate solutions with complete transparency. From plots to construction — we deliver excellence.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/923358290584" class="btn-primary">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <a href="#location" class="btn-outline">Visit Our Office</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="about-image" data-aos="fade-right"></div>
+    <div class="about-content" data-aos="fade-left">
+      <h2 class="section-title">Architecture of Trust</h2>
+      <p>ELITE REAL ESTATE & BUILDERS stands as a symbol of transparency and reliability in Peshawar and Islamabad. We believe in honest dealings and long-term relationships with every client.</p>
+      <p>Our “No-Frills, No-Fraud” policy ensures complete clarity at every step — whether you are buying a plot, investing in a project, or looking for construction services.</p>
+      
+      <div class="about-highlight">
+        <strong>Mr. Saddat Ullah</strong>
+        Founder & CEO — dedicated to delivering genuine real estate solutions with integrity.
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+    <p class="section-subtitle" data-aos="fade-up">Comprehensive real estate and construction solutions tailored for you.</p>
+    
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-icon"><i class="fas fa-map"></i></div>
+        <h3>Plot Sales</h3>
+        <p>Verified residential & commercial plots in prime locations of Peshawar and surrounding areas.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-icon"><i class="fas fa-home"></i></div>
+        <h3>House Construction</h3>
+        <p>Complete construction services from foundation to finishing with quality materials and skilled teams.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-icon"><i class="fas fa-building"></i></div>
+        <h3>Property Dealing</h3>
+        <p>Buy, sell or rent residential and commercial properties with complete documentation support.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-icon"><i class="fas fa-handshake"></i></div>
+        <h3>Investment Guidance</h3>
+        <p>Expert advice on real estate investments to help you make secure and profitable decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+    <h2 class="section-title" data-aos="fade-up">Why Choose Elite</h2>
+    <p class="section-subtitle" data-aos="fade-up">We focus on trust, quality and long-term client satisfaction.</p>
+
+    <div class="features-grid">
+      <div class="feature-item" data-aos="fade-up">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <div>
+          <h4>100% Transparency</h4>
+          <p>No hidden charges. Clear documentation and honest communication at every stage.</p>
+        </div>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <h4>Prime Locations</h4>
+          <p>Properties and projects in high-demand areas of Peshawar and Islamabad corridor.</p>
+        </div>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon"><i class="fas fa-users"></i></div>
+        <div>
+          <h4>Experienced Team</h4>
+          <p>Skilled professionals dedicated to delivering quality work on time.</p>
+        </div>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <div>
+          <h4>Client Support</h4>
+          <p>Direct communication with Mr. Saddat Ullah for personalized assistance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location" class="location-section">
+    <div class="location-details" data-aos="fade-right">
+      <h2>Visit Our Office</h2>
+
+      <div class="info-row">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <b>Office Address</b>
+          <p>KB Height, Canal Road, Peshawar</p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <i class="fas fa-user"></i>
+        <div>
+          <b>Contact Person</b>
+          <p>Mr. Saddat Ullah</p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <i class="fas fa-phone"></i>
+        <div>
+          <b>Phone / WhatsApp</b>
+          <p>+92 335 8290584</p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <i class="fas fa-clock"></i>
+        <div>
+          <b>Working Hours</b>
+          <p>7:00 AM – 12:00 AM (Daily)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-card" data-aos="zoom-in">
+      <h3>OPEN IN GOOGLE MAPS</h3>
+      <a href="https://maps.google.com/?q=KB+Height+Canal+Road+Peshawar" target="_blank" class="map-btn">
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- WHATSAPP CTA -->
+  <div class="whatsapp-section">
+    <a href="https://wa.me/923358290584" class="wa-btn">
+      <i class="fab fa-whatsapp"></i> Chat Directly on WhatsApp
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="company">ELITE REAL ESTATE & BUILDERS</div>
+    <div class="info">
+      KB Height, Canal Road, Peshawar<br>
+      Mr. Saddat Ullah · +92 335 8290584
+    </div>
+    <div>© 2026 All Rights Reserved</div>
+    <div class="powered">Powered by °Fahrensites</div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 900, once: true });</script>
+</body>
+</html>
